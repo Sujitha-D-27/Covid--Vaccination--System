@@ -20,7 +20,7 @@ function Newcenter() {
     const handlesubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/addcenter', values);
+            const response = await axios.post('https://covid-vaccination-system-sujitha.onrender.com/addcenter', values);
 
             if (response.data.success) {
                 console.log('Center added successfully');

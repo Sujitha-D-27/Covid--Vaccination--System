@@ -17,7 +17,7 @@ export default function Login() {
     const handlesubmit = async (event) => {
         event.preventDefault();
             try {
-                const response = await axios.post('http://localhost:5000/loginn', credentials);
+                const response = await axios.post('https://covid-vaccination-system-sujitha.onrender.com/loginn', credentials);
                 const role = response.data.role;
                 console.log(role);
                 if (role === 'admin') {

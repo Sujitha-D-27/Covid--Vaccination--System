@@ -18,7 +18,7 @@ function Signup() {
         setErrors(SignUpValidation(values));
         if (errors.name === "" && errors.email === "" && errors.password === "") {
             try {
-                const response = await axios.post('http://localhost:5000/signup', values);
+                const response = await axios.post('https://covid-vaccination-system-sujitha.onrender.com/signup', values);
                 console.log(response.data); // Handle response data as needed
                 navigate('/');
             }

@@ -8,14 +8,14 @@ function Admin() {
   const [details, setDetails] = useState([]);
     
     function showdetails() {
-        axios.get('http://localhost:5000/Home').then((result) => {
+        axios.get('https://covid-vaccination-system-sujitha.onrender.com/Home').then((result) => {
             setDetails(result.data);
             console.log(result);
         })
     }
 function bookSlot(Location) {
       // Assuming 'id' is the unique identifier for the center
-      axios.post('http://localhost:5000/AddSlot', { Location}).then((result) => {
+      axios.post('https://covid-vaccination-system-sujitha.onrender.com/AddSlot', { Location}).then((result) => {
           console.log(result);
         // Reload the details after booking a slot
         showdetails();
